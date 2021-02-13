@@ -1,0 +1,322 @@
+/**Font Imports**/
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+/**Animations**/
+@keyframes fadeUp{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+}
+
+@keyframes colorChange{
+    0%{
+        color:red;
+    }
+    15%{
+        color:yellow;
+    }
+    30%{
+        color:orange;
+    }
+    45%{
+        color:chartreuse;
+    }
+    60%{
+        color:blue;
+    }
+    75%{
+        color:indigo;
+    }
+    90%{
+        color:violet;
+    }
+    100%{
+        color:red;
+    }
+}
+/**Typography**/
+body{
+    font-family: 'Press Start 2P', 'Potta One', sans-serif;
+}
+h1{
+    font-size:28px;
+    margin:1.5em auto;
+}
+#theme-select-overlay{
+    width:600px;
+    height:200px;
+    margin:0 auto;
+    position:relative;
+    top:30%;
+    border-radius: 16px;
+    background-color: #efefef;
+    display:none;
+   
+   
+}
+.image-container{
+    height:200px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#theme-select-overlay img{
+    width: 50px;
+    height:auto;
+    border-radius: 12px;
+    padding:10px;
+}
+#theme-select-overlay img:hover{
+    cursor: pointer;
+    background-color: pink;
+}
+#theme-select-overlay img:active{
+    cursor: pointer;
+    background-color: rgba(130, 226, 34, 0.781);
+    animation: fadeUp ease-out 3s;
+}
+#overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.712);
+    display: none;
+  
+}
+
+#overlay-game-over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    
+}
+
+#overlay-game-over p{
+    font-size: 28px;
+    animation: colorChange 4s linear;
+    margin: 8em auto;
+
+}
+
+#overlay-buttons{
+    width:100%;
+    height:100%;
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.overlay-btns{
+    padding: 1em 2em;
+    border:0px;
+    border-radius:12px;
+    margin: 0 2em;
+    font-family: 'Press Start 2P', 'Potta One', sans-serif;
+}
+.overlay-btns:hover{
+    background:pink;
+}
+.overlay-btns:active{
+    background-color: rgba(130, 226, 34, 0.781)
+}
+.global-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.col-1{
+    width:25%;
+}
+.col-2{
+    width:500px;
+}
+#game-information{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height:100px;
+    display:none;
+    margin-top:0;
+
+}
+
+.game-grid{
+    height:500px;
+    width:500px;
+    border:2px solid gray;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.game-title{
+    text-align: center;
+}
+#home-screen{
+    height:500px;
+    width:500px;
+    border: 2px dotted rgba(130, 226, 34, 0.781);
+    margin: 0 auto;
+    
+}
+.cover-art{
+    width:250px;
+    height:250px;
+    background-image: url('./images/coverart.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin: 50px auto;
+}
+.buttons{
+    text-align: center;
+}
+
+.btns{
+    border:0px;
+    border-radius:14px;
+    font-family:'Press Start 2P', 'Potta One', sans-serif;
+    font-size: 18px;
+    padding: 0.75em 3em;
+    margin-top:0.5em;
+}
+
+#start{
+    margin-top:0;
+}
+#start:hover{
+    background-color: pink;
+}
+#back:hover{
+    background-color: pink;
+}
+#highscore:hover{
+    background-color:pink;
+}
+
+#themes:hover{
+    background-color: pink;
+}
+#themes:active{
+    background-color: rgba(130, 226, 34, 0.781);
+}
+#start:active{
+    background-color: rgba(130, 226, 34, 0.781);
+}
+#highscore:active{
+    background-color:  rgba(130, 226, 34, 0.781);
+}
+#back:active{
+    background-color:  rgba(130, 226, 34, 0.781);
+}
+.buttons-2{
+    display: flex;
+    justify-content: space-around;
+}
+#highscore, #themes{
+    font-size:12px;
+    padding: 0.75em 2em;
+    margin-top:0;
+}
+.highscore-info{
+    text-align: center;
+}
+#highscorer-label{
+    font-size: 12px;
+    margin:3em 1em;
+
+}
+.custom-text{
+    color:indianred;
+}
+footer{
+    margin-top:1em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.footer-col-1{
+    width:25%;
+}
+.footer-col-2{
+    width:50%;
+}
+
+.credits{
+    font-size:14px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+#attr-link:hover{
+    color:pink
+}
+a:visited{
+    color:black;
+    text-decoration: none;
+}
+
+
+/**Styling the game window**/
+
+#game-screen{
+    display: none;
+}
+.squares{
+    width:20px;
+    height:20px;
+}
+.snake{
+    background:green; 
+}
+
+/**fruits**/
+.apple{
+    background-image: url('./images/apple.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.blueberry{
+    background-image: url('./images/blueberry.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cherry{
+    background-image: url('./images/cherry.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.lemon{
+    background-image: url('./images/lemon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mango{
+    background-image: url('./images/mango.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.orange{
+    background-image: url('./images/orange.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pear{
+    background-image: url('./images/pear.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
